@@ -1,0 +1,42 @@
+body {
+    background-color: lightblue;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+p {
+    /* font */
+    font-family: verdana;
+    font-size: 20px;
+    /* alignment and placement */
+    text-align: center;
+    padding-top: 40%; /* puts it in the middle of the circls */
+}
+#circle {
+    /* Placement and size of the object */
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    width: 300px;
+    height: 300px;
+    /* half of the width and height makes it into a circle */
+    border-radius: 150px;
+    /* Colors and look of the object */
+    background: #73AD21; 
+}
+#graph{
+    position: relative;
+    width: 600px;
+    height: 400px;
+    margin-left: 40%;
+}
+#graph2{
+    position: relative;
+    top: 200px;
+    width: 600px;
+    height: 400px;
+    margin-left: 40%;
+}
