@@ -5,18 +5,36 @@
 	</head>
 <body>
 
-<h1>Insert Heading</h1>
+<div class="animateme">
+  <ul class="bg-bubbles">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</div>
+
 <div id="circle" align="center">
+	<h1>Insert Heading</h1>
 	<p id="text">maybe links to put here</p>
 	<a id="text" href="https://alimcg.shinyapps.io/firstGraph/">First Graph</a>
 </div>
 
 <div class="post" id="post1">
-	<img class="graph" id="graph1" src="http://www.quickanddirtytips.com/sites/default/files/images/5360/line_graph.png" alt="Graph">
+	<div class="graph" id="graph1" style="max-width:500px">
+  		<img class="mySlides" src="img1.jpg" style="width:100%">
+ 		<img class="mySlides" src="img2.jpg" style="width:100%">
+	</div>
 	<p class="postText"> This is some text under the post</p>
-</div>
-
-<div id="background">
 </div>
 
 <div class="post" id="post2">
@@ -29,5 +47,22 @@
 
 <div id="end">
 </div>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); 
+}
+</script>
+
 </body>
 </html>
