@@ -31,8 +31,8 @@
 
 <div class="post" id="post1">
 	<div class="graph" id="graph1" style="max-width:500px">
-  		<img class="mySlides" src="img1.jpg" style="width:100%">
- 		<img class="mySlides" src="img2.jpg" style="width:100%">
+  		<img class="mySlides" src="\images\img1.jpg" style="width:100%">
+ 		<img class="mySlides" src="\images\img2.jpg" style="width:100%">
 	</div>
 	<p class="postText"> This is some text under the post</p>
 </div>
@@ -41,25 +41,23 @@
 	<img class="graph" id="graph2" src="http://www.quickanddirtytips.com/sites/default/files/images/5360/line_graph.png" alt="Graph">
 </div>
 
-<div class="post" id="post3">
-	<img class="graph" id="graph3" src="http://www.quickanddirtytips.com/sites/default/files/images/5360/line_graph.png" alt="Graph">
-</div>
+
 
 <div id="end">
 </div>
 <script>
-var myIndex = 0;
+var slideIndex = 0;
 carousel();
 
 function carousel() {
     var i;
     var x = document.getElementsByClassName("mySlides");
     for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";  
+      x[i].style.display = "none"; 
     }
-    myIndex++;
-    if (myIndex > x.length) {myIndex = 1}    
-    x[myIndex-1].style.display = "block";  
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1} 
+    x[slideIndex-1].style.display = "block"; 
     setTimeout(carousel, 2000); 
 }
 </script>
