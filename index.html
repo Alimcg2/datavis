@@ -30,9 +30,9 @@
 </div>
 
 <div class="post" id="post1">
-	<div class="graph" id="graph1" style="max-width:500px">
-  		<img class="mySlides" src="\images\img1.jpg" style="width:100%">
- 		<img class="mySlides" src="\images\img2.jpg" style="width:100%">
+	<div class="graph" id="graph" style="max-width:500px">
+  		<img id="img1" src="img1.jpg" style="width:100%">
+ 		<img id="img2" src="img2.jpg" style="width:100%">
 	</div>
 	<p class="postText"> This is some text under the post</p>
 </div>
@@ -45,22 +45,5 @@
 
 <div id="end">
 </div>
-<script>
-var slideIndex = 0;
-carousel();
-
-function carousel() {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none"; 
-    }
-    slideIndex++;
-    if (slideIndex > x.length) {slideIndex = 1} 
-    x[slideIndex-1].style.display = "block"; 
-    setTimeout(carousel, 2000); 
-}
-</script>
-
 </body>
 </html>
