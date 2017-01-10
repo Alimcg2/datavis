@@ -110,7 +110,11 @@ h1:hover{
     margin-top: -10px;
     font-family: 'Khula', sans-serif;
     opacity: .2;
-    animation: mymove 3s 1;
+    animation-name: mymove;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 #graph{
@@ -131,9 +135,21 @@ h1:hover{
 #Yaxis{
     transform: rotate(90deg);
     position: absolute;
-    margin-top: 100px;
-    margin-left: -100px;
+    margin-top: 160px;
+    margin-left: -220px;
 }
+
+.YText{
+    font-size: 30px;
+    font-family: 'Poiret One', cursive;
+    color: white;
+    text-decoration: none;
+    padding-left: 30px;
+}
+.YText:hover{
+    color: #d0b5ae;
+}
+    
 
 #image{
     width: 100%;
@@ -149,6 +165,7 @@ h1:hover{
     opacity: .5;
     filter: blur(2px);
 }
+
 
 #overImage{
     /* size and shape */
@@ -205,7 +222,11 @@ h1:hover{
     margin-top: -10px;
     font-family: 'Khula', sans-serif;
     opacity: .2;
-    animation: mymove 3s 1;
+    animation-name: mymove;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 
@@ -213,12 +234,12 @@ h1:hover{
     from {margin-left: 0px;}
     to {margin-left: 300px;}
 }
-
+ 
 #aboutText{
     padding-top: 2500px;
     font-family: 'Raleway', sans-serif;
     font-size: 20px;
-    margin-bottom:500px
+    margin-bottom:500px;
 }
 
 /* creates bar at the bottom */
