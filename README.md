@@ -1,16 +1,26 @@
 # Basic To Do
 
-## Index Page
+## Index Page Layout
 
-* Finish getting basic layout
-* Add fun popups and hovers
-* Figure out what background to use
-* Add images 
+##### Graph
+* Finish x and y axis of graph
+  * y add links
+  * x add timeline and click for more page
+* add more posts to graph
 
-## Test Run Graph pages
+##### About
+* get the about section layout
 
-* Create basic Rmd/plotly graph
-* Add links to that page to index
-* Attempt to edit the html and add css in the Rmd file
+##### Other
+* test the bubbles again
 
 
+## Posts
+
+* Figure out post layout
+* Test first post
+
+## Other
+* Clean up code
+* add more comments
+* organize the files
