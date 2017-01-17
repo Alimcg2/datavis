@@ -24,3 +24,8 @@
 * Clean up code
 * add more comments
 * organize the files
+
+##### Fancy Stuff
+* Start header animations upon arrival to section
+* Create logo
+* Create custom post pictures

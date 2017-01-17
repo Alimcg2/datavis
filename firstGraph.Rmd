@@ -4,6 +4,8 @@ runtime: shiny
 output: 
   html_document:
     css: testing.css
+    keep_md: yes
+    smart: no
 ---
 
 ```{r setup, include=FALSE}
