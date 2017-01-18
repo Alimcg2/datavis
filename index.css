@@ -23,7 +23,7 @@ body{
     background-color: #00001a;
 }
 #circle:hover{
-    box-shadow: 6px 6px 15px rgba(255, 255, 255, 0.1), -6px -6px 15px rgba(255, 255, 255, 0.1);
+    box-shadow: 6px 6px 15px rgba(255, 255, 255, 0), -6px -6px 15px rgba(255, 255, 255, 0);
 }
 #outerCircle{
     /* sets up the positioning */
@@ -41,7 +41,7 @@ body{
     opacity: .7;
 }
 #outerCircle:hover{
-    box-shadow: 6px 6px 15px rgba(255, 255, 255, 0.1), -6px -6px 15px rgba(255, 255, 255, 0.1);
+    box-shadow: 6px 6px 15px rgba(255, 255, 255, 0), -6px -6px 15px rgba(255, 255, 255, 0);
 }
 
 
@@ -66,8 +66,10 @@ h1{
     margin-left: 27%;
     margin-top: -200px;
 }
+#space{
+    height: 30px;
+}
 
-    
 .text{
     color: white;
     text-overflow: ellipsis;
@@ -75,15 +77,39 @@ h1{
     font-family: 'Poiret One', cursive;
     text-decoration: none;
 }
-
-h1:hover{
-    color: #d0b5ae;
+#top{
+    margin-top: 50px;
 }
+
 .text:hover{
     color: #d0b5ae;
 }
     
+.icon{
+    border: 2px solid white;
+    height: 60px;
+    width: 60px;
+}
+#icon1{
+    margin-right: 350px;
+    margin-top: 80px;
+}
+#icon2{
+    margin-right: 130px;
+}
+#icon3{
+    margin-left: 130px;
+    margin-top: -65px;
+}
 
+#icon4{
+    margin-top: -123px;
+    margin-left: 350px;
+}
+.iconImage{
+    height: 60px;
+    width: 60px;
+}
 
 #posts{
     margin-top: 1000px;
