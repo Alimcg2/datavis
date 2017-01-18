@@ -139,19 +139,21 @@ h1:hover{
     margin-left: -220px;
 }
 
-.YText{
+.AxisText{
     font-size: 30px;
     font-family: 'Poiret One', cursive;
     color: white;
     text-decoration: none;
     padding-left: 30px;
 }
-.YText:hover{
+.AxisText:hover{
     color: #d0b5ae;
 }
     
 
 .image{
+    opacity: .5;
+    filter: blur(2px);
     width: 50px;
     height: 50px;
     /* size and shape */
@@ -160,29 +162,41 @@ h1:hover{
     border: 5px solid rgba(255, 255, 255, .6);
     position: absolute;
     display: initial;
+    transition: transform 1s;
 }
 
 .image:hover{
-    opacity: .5;
-    filter: blur(2px);
-    width: 100px;
-    height:  100px;
-    
+    opacity: 1;
+    filter: blur(0px);
+    transform: scale(3,3);
 }
 
 
-.hoverText{
-    color: #fff;
-    text-align: center;
-    overflow: hidden;
+#img1{
+    margin-top: 200px;
+    margin-left: 10px;
+}
+#img2{
     margin-top: 50px;
-    display: none;
+    margin-left: 200px;
+}
+#img3{
+    margin-top: 150px;
+    margin-left: 400px;
+}
+#img4{
+    margin-top: 200px;
+    margin-left: 600px;
+}
+#img5{
+    margin-top: 300px;
+    margin-left: 800px;
 }
 
-img:hover + .hoverText{
-    display: initial;
+#Xaxis{
+    margin-top: 500px;
+    margin-left: 800px;
 }
-
 
 #about{
     margin-top: 2000px;
@@ -193,6 +207,7 @@ img:hover + .hoverText{
     max-height: 200px;
     background-color: white;
 }
+
 #meHeading{
     position: relative;
     padding-top: 20px;
@@ -201,6 +216,7 @@ img:hover + .hoverText{
     font-family: 'Poiret One', cursive;
     z-index: 2;
 }
+
 #backHeading{
     position: absolute;
     z-index: 1;
