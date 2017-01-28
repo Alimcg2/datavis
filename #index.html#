@@ -68,13 +68,13 @@
 	<p id="meHeading">About These Graphs</p>
 </div>
 
-<div id="aboutText">
+
 	<div id="bout">
 	<p id="meText">Above you will find posts with data visualizations of topics that I find interesting. Data comes from open source databases and APIs. The data I choose to visualize covers a wide range of topics, some might be political, some comical, and some more heavy. Some of the subject matter is sensitive and/or controversial, beware. Most, if not all, of the visualizations are interactive so please give the pages time to load. All graphs posted above were created by me for your interactive pleasure! Enjoy!  </p>
 	<img id="hist" src="hist.png">
 	</div>
 
-</div>
+
 
 
 </body>
