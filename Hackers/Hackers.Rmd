@@ -5,7 +5,7 @@ output:
     css: hackers.css
 ---
 
-The following graphs depict a list of IP addresses of people around the world that attempt (and fail) to hack the server I am hosting at home. It maps a trail from our location in Seattle, WA the location at which the IP address is coming from. You can zoom in and scroll over the different locations at the end of the lines to see more information.
+The following graphs depict a list of IP addresses of people around the world that attempt (and fail) to hack the server that this website is running on. It maps a trail from our location in Seattle, WA the location at which the IP address is coming from. You can zoom in and scroll over the different locations at the end of the lines to see more information.
 
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
