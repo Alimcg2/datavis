@@ -37,7 +37,7 @@ colnames(marches)[5] <- "People"
 all_states <- map_data("state")
 #plot all states with ggplot
 p <- ggplot()
-p <- p + geom_polygon( data=all_states, aes(x=long, y=lat, group = group),colour="#f9f6c7", fill="white" )
+p <- p + geom_polygon( data=all_states, aes(x=long, y=lat, group = group),colour="#f75d42", fill="#fff8e8" )
 
 p <- p + geom_point( data=marches, aes(x=Longitude, y=Latitude, size = People, color=People)) + scale_size_continuous(range = c(2,20))
 #sets scale colors
@@ -45,7 +45,8 @@ p <- p + scale_color_gradient(low='#082554', high='#f75d42')
 #gets rid of lines/axis and background
 p <- p + theme(panel.grid.major = element_blank(), 
                panel.grid.minor = element_blank(),
-               panel.background = element_blank(), 
+               panel.background = element_rect(fill = "#fff8e8"),
+               plot.background = element_rect(fill = "#fff8e8"), 
                axis.line = element_blank(),
                axis.title.x=element_blank(),
                axis.text.x=element_blank(),
@@ -99,7 +100,8 @@ trump <- election %>%
 p2 <- ggplot() + geom_polygon(data = clinton, mapping = aes(x = long, y = lat, group = group), fill = "#b0c5e8") + coord_fixed(1.3)
 p2 <- p2 + theme(panel.grid.major = element_blank(), 
                  panel.grid.minor = element_blank(),
-                 panel.background = element_blank(), 
+                 panel.background = element_rect(fill = "#fff8e8"),
+                 plot.background = element_rect(fill = "#fff8e8"), 
                  axis.line = element_blank(),
                  axis.title.x=element_blank(),
                  axis.text.x=element_blank(),
