@@ -1,53 +1,70 @@
 /* background color change */
 body{
-    background:#0b1003;
+    background:#eff7c8;
     -webkit-animation:colour 10s linear infinite;}
 @-webkit-keyframes colour{
-    0%{background:#0b1003}
-    40%{background:#262d14}
-    80%{background:#52510d}
-    100%{background:#0b1003}
+    0%{background:#eff7c8}
+    40%{background:#ddf7c8}
+    80%{background:#c8f7db}
+    100%{background:#eff7c8}
 }
 
 #HeaderBar{
-    margin-top: 10px;
+    positiion: relative;
+    margin-top: 30px;
     width: 100%;
     opacity: .6;
     z-index: 0;
-    max-height: 200px;
     background-color: white;
-    height: 50px;
+    height: 210px;
 }
 #Header{
-    position: relative;
-    padding-top: 20px;
-    margin-left: 80px;
+    position: absolute;
+    margin-top: -400px;
+    margin-left: 40px;
     font-size: 70px;
     font-family: 'Poiret One', cursive;
-    z-index: 2;
 }
 #Title{
+    position: relative;
     z-index: 1;
     font-size: 200px;
-    margin-left: 60px;
+    margin-left: 90px;
     margin-top: -10px;
     font-family: 'Khula', sans-serif;
     opacity: .2;
 }
 #allPosts{
     position: absolute;
-    margin-top: 300px;
-    margin-left: 200px;
+    margin-left: 300px;
     margin-bottom: 100px;
-    margin-right: 200px;
+    margin-right: 300px;
 }
 .post{
     margin-top: 30px;
 }
-#postText1{
-    font-size: 100px;
-    font-family: 'Khula', sans-serif;
+.postText{
+    font-size: 70px;
+    font-family: 'Poiret One', cursive;
 }
-#postImage1{
+.postDate{
+    font-family: 'Khula', sans-serif;
+    margin-top: -40px;
+}
+.postDescr{
+    font-family: 'Poiret One', cursive;
+}
+    
+.postImage{
+    margin-left: 50px;
     position: relative;
+    height: 200px;
+    width: 300px;
+    margin-bottom: 40px;
+}
+.postImage0{
+    position: relative;
+    height: 200px;
+    width: 300px;
+    margin-bottom: 40px;
 }

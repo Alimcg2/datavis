@@ -132,11 +132,6 @@ h1{
     margin-top: -10px;
     font-family: 'Khula', sans-serif;
     opacity: .2;
-    animation-name: mymove;
-    animation-duration: 10s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
 }
 
 #graph{
@@ -249,10 +244,6 @@ h1{
     font-family: 'Khula', sans-serif;
     opacity: .2;
     animation-name: mymove;
-    animation-duration: 10s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
 }
 
 
