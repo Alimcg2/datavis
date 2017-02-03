@@ -3,6 +3,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="309px" height="325px" viewBox="0 0 309 325" enable-background="new 0 0 309 325" xml:space="preserve">
-<rect x="-11" fill="#F1B400" width="335" height="325"/>
-<text transform="matrix(0.4755 0 0 1 19.5786 136.5439)"><tspan x="0" y="0" font-family="'MyriadPro-Regular'" font-size="99.1245">More Coming </tspan><tspan x="156.07" y="118.949" font-family="'MyriadPro-Regular'" font-size="99.1245">Soon...</tspan></text>
+<rect x="-11" fill="#9E9E9E" width="335" height="325"/>
+<text transform="matrix(0.4755 0 0 1 19.5786 136.5439)" font-family="'MyriadPro-Regular'" font-size="99.1245">More Coming </text>
+<text transform="matrix(0.4755 0 0 1 93.79 255.4932)" font-family="'MyriadPro-Regular'" font-size="99.1245">Soon...</text>
 </svg>
