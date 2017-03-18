@@ -62,9 +62,16 @@ body{
     width: 300px;
     margin-bottom: 40px;
 }
+.postImage:hover{
+    filter: blur(2px);
+}
 .postImage0{
     position: relative;
     height: 200px;
     width: 300px;
     margin-bottom: 40px;
 }
+.postImage0:hover{
+    filter: blur(2px);
+}
+    

@@ -1,0 +1,142 @@
+---
+title: "UFO Sightings"
+output: 
+  html_document:
+    css: ufo.css
+
+---
+  
+  ```{r include = FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+
+## Locaitons of Sightings 
+
+Here is an interactive map showing the locations of all recent UFO sightings in the United States and Canada The bulk of the sightings happen in urban areas, New York has some of the highest rates. This data contains infomration about location, time, and the shape of the UFO along with a description of the sighting. 
+
+##### Hover over numbers to show their range, click on them to zoom.
+
+
+
+```{r message = FALSE, echo=FALSE, fig.height=5.5, fig.width=9, message=FALSE, warning=FALSE}
+library(dplyr)
+library(leaflet)
+library(maps)
+library(plotly)
+library(ggplot2)
+library(tidyr)
+drugUse <- read.csv("DrugUse.csv")
+ufoCoords <- read.csv("UFOCoords.csv")
+icons <- awesomeIcons(
+  icon = 'ion-planet',
+  iconColor = 'black',
+  library = 'ion',
+  markerColor = 'blue'
+)
+m <- leaflet() %>% setView(lng = -95, lat = 40, zoom = 3) %>% addTiles() %>% addAwesomeMarkers(data = ufoCoords, ~lng, ~lat, popup = ~City, icon=icons, clusterOptions = markerClusterOptions()) %>% addProviderTiles(providers$CartoDB.DarkMatter)
+m
+
+```
+
+
+## Timeline of Sightings
+
+Here is a timeline of when they occurred. The above map doesn't show in depth infomraiton about the timing of these events, below are the sightings plotted against time and number of occurances. As you can see there are a few interesting points that this graph makes. First it shows that there is a steady average of about 10 sightings per day. This also pinpoints days where there was an elevated number of UFO sightings. 
+
+##### Hover over the points to see the day and number of sightings.
+
+```{r message = FALSE, echo=FALSE, fig.height=5.5, fig.width=9, message=FALSE, warning=FALSE}
+ufoDate <- ufoCoords %>% 
+  group_by(Date) %>%
+  summarise(n = n())
+  
+g <- ggplot(ufoDate, aes(x = Date, y = n)) + geom_point()
+g <- g + theme(axis.line=element_blank(),
+      axis.text.x=element_blank(),
+      axis.text.y=element_blank(),
+      axis.ticks=element_blank(),
+      axis.title.x=element_text(color = "black"),
+      axis.title.y=element_text(color = "black"),
+      legend.position="none",
+      panel.border=element_blank(),
+      panel.grid.major=element_blank(),
+      panel.grid.minor=element_blank(),
+      panel.background = element_rect(fill = "#344456"),
+      plot.background = element_rect(fill = "#344456"))
+g <- g + scale_x_discrete(name="Time") +
+     scale_y_continuous(name="Number of Sightings")
+ggplotly(g)
+```
+
+## 4/7/2016
+
+Lets look closer at the outliers on this graph. First we have the date of April 7th, 2016. In total, this day had 71 sightings. The second highest number of sightings (from the graph above). There are some similarities in location and time on this graph: in midwest there were another cluster around 9pm; and in the Seattle area, around 10pm there were multiple sightings. But a few clusters of sightings doesn't excite me as what is to come!
+
+##### Drag a box to zoom in. Hover to see more information. 
+
+```{r message = FALSE, echo=FALSE, fig.height=5.5, fig.width=9, message=FALSE, warning=FALSE}
+
+Day4.7 <- ufoCoords %>% 
+  filter(Date %in% "4/7/2016" )
+#load us map data
+all_states <- map_data("state")
+o <- ggplot()
+o <- o + geom_polygon( data=all_states, aes(x=long, y=lat, group = group),colour="#7f91a5", fill="black" )
+o <- o + geom_point( data=Day4.7, aes(x=lng, y=lat, color=Shape, text = paste(Time, AM.PM)))
+o <- o + theme(axis.line=element_blank(),
+      axis.text.x=element_blank(),
+      axis.text.y=element_blank(),
+      axis.ticks=element_blank(),
+      axis.title.x=element_blank(),
+      axis.title.y=element_blank(),
+      panel.border=element_blank(),
+      panel.grid.major=element_blank(),
+      panel.grid.minor=element_blank(),
+      panel.background = element_rect(fill = "#344456"),
+      plot.background = element_rect(fill = "#344456"),
+      legend.background = element_rect(fill="#344456"),
+      legend.title = element_blank())
+o <- o + scale_color_hue(l=80, c=40)
+ggplotly(o)
+```
+
+## 7/27/2016
+
+On this day there were 102 sightings. The best part is that a bulk of them were in California. If you zoom in on California, you'll see that many of them were of the same shape as well (a fireball). 
+
+```{r message = FALSE, echo=FALSE, fig.height=5.5, fig.width=9, message=FALSE, warning=FALSE}
+library(RColorBrewer)
+
+Day7.27 <- ufoCoords %>% 
+  filter(Date %in% "7/27/2016" ) %>% 
+  filter(Country != "CANADA")
+#load us map data
+all_states <- map_data("state")
+p <- ggplot()
+p <- p + geom_polygon( data=all_states, aes(x=long, y=lat, group = group),colour="#7f91a5", fill="black" )
+p <- p + geom_point( data=Day7.27, aes(x=lng, y=lat, color=Shape, text = paste(Time, AM.PM)))
+p <- p + theme(axis.line=element_blank(),
+      axis.text.x=element_blank(),
+      axis.text.y=element_blank(),
+      axis.ticks=element_blank(),
+      axis.title.x=element_blank(),
+      axis.title.y=element_blank(),
+      panel.border=element_blank(),
+      panel.grid.major=element_blank(),
+      panel.grid.minor=element_blank(),
+      panel.background = element_rect(fill = "#344456"),
+      plot.background = element_rect(fill = "#344456"),
+      legend.background = element_rect(fill="#344456"),
+      legend.title = element_blank())
+p <- p + scale_color_hue(l=80, c=40)
+ggplotly(p)
+```
+
+This sighting was actually caught on camera by many people, one video is below. 
+
+[![UFO](http://img.youtube.com/vi/53gopIFRYxE/0.jpg)](http://www.youtube.com/watch?v=53gopIFRYxE)
+
+
+

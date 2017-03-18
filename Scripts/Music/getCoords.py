@@ -1,9 +1,11 @@
+from random import randint
 import json
 import requests
 import urllib
 
+
 # opens up the files for reading and writing
-with open('Albums.txt', 'r') as inFile, open('artists', 'a') as outFile:
+with open('Albums.txt', 'r') as inFile, open('artists.txt', 'w') as outFile:
     albumIDs = []
     searchBase ="https://api.spotify.com/v1/search?q="
     searchType ="&type=album"
@@ -38,6 +40,20 @@ with open('Albums.txt', 'r') as inFile, open('artists', 'a') as outFile:
     for ID in albumIDs:
         getAlbum = requests.get(getAlbumBase + ID + getAlbumEnd)
         albumData = json.loads(getAlbum.text)
-        print(getAlbum)
-        
-    
+        tracks = albumData["items"]
+        listArtists = []
+        for track in tracks:
+            for artist in track["artists"]:
+                if artist["name"] not in listArtists:
+                    listArtists.append(artist["name"])
+                    if artist["name"] not in artistCoords:
+                        xCoord = randint(0, 300)
+                        yCoord = randint(0, 300)
+                        artistCoords[artist["name"]] = (xCoord, yCoord)
+                    else:
+                        xCoord, yCoord = artistCoords[artist["name"]]
+                    
+                    try: 
+                        outFile.write(artist["name"] + "," + str(xCoord) + "," + str(yCoord) + "," + listArtists[0] + "," + str(xCoord)  + "," + str(yCoord) + "\n")
+                    except UnicodeEncodeError:
+                        print(artist["name"] + "Unicode")
