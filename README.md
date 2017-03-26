@@ -1,31 +1,5 @@
-# Basic To Do
+# Visiali
 
-## Index Page Layout
+Visiali is a simple website created to showcase visualizations of datasets that are relevent to my life. The data is gathered mostly through APIs and datasets found through various locaitons. All of the graphs are made with R and some data wrangling is done in Python. 
 
-##### Graph
-* Finish x and y axis of graph
-  * y add links
-  * x add timeline and click for more page
-* add more posts to graph
-
-##### About
-* get the about section layout
-
-##### Other
-* test the bubbles again
-
-
-## Posts
-
-* Figure out post layout
-* Test first post
-
-## Other
-* Clean up code
-* add more comments
-* organize the files
-
-##### Fancy Stuff
-* Start header animations upon arrival to section
-* Create logo
-* Create custom post pictures
+Any data used in a visual is sourced at the bottom of the page. 
