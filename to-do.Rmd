@@ -1,0 +1,16 @@
+---
+title: "To-do"
+output: html_notebook
+---
+
+### Small Things:
+1. Change font for 'older' page. 
+2. Link older page back to home.
+3. Adjust size between pages on home.
+4. Change size of header to not fill page. 
+
+### Larger Things:
+1. Create tags for different types of visualizations.
+2. Create header that drops down further on page.
+3. Change the intro circle.
+4. Change background.

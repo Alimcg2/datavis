@@ -1,0 +1,98 @@
+---
+title: "Mental Illness"
+output: 
+  html_document: 
+    css: MentalIllness.css
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+I am currently a student at the University of Washington. Although I am studying Infromatics, I enjoy learning about many other things, Psychology being one of them. I just finished up taking a class on Biosychology, where we ended the quarter discussing mental illness. This is a very serious topic, that many people don't know enough about. The visualizations that follow shows data on mental illness in the United States. 
+
+First, there is a graph of any type of mental illness in the United States. 
+
+### Any Mental Illness
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(dplyr)
+library(plotly)
+library(maps)
+any <- read.csv("AnyIllness.csv")
+depressed <- read.csv("DepressiveEpisode.csv")
+serious <- read.csv("SeriousIllness.csv")
+suicide <- read.csv("SuicideThoughts.csv")
+code <- read.csv("StateCode.csv")
+
+any <- any %>% 
+  filter(Map.Group == 3)
+
+any$Small..Area.Estimate <- gsub("%","", any$Small..Area.Estimate)
+# creates the map of Any Mental Illness
+f <- plot_ly(type="choropleth", locations=any$State, locationmode="USA-states", z=any$Small..Area.Estimate) %>% layout(geo=list(scope="usa"))  %>% 
+layout(paper_bgcolor='rgb(215, 218, 224)') 
+f
+```
+
+Next is a graph of the percentage of people who has ever had a depressed episode.
+
+### Depressed Episodes
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+depressed <- depressed %>% 
+  filter(Map.Group == 3) %>% 
+  filter(! State == "District of Columbia")
+
+depressed <- left_join(depressed, code, by = "State")
+
+depressed$Small..Area.Estimate <- gsub("%","", depressed$Small..Area.Estimate)
+# creates the map of Any Mental Illness
+f <- plot_ly(type="choropleth", locations=depressed$Code, locationmode="USA-states", z=depressed$Small..Area.Estimate) %>% layout(geo=list(scope="usa")) %>% 
+layout(paper_bgcolor='rgb(215, 218, 224)') 
+f
+
+
+```
+
+The next graph shows any prevalence of a serious mental illness.
+
+### Serious Mental Illness
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+serious <- serious %>% 
+  filter(Map.Group == 3) %>% 
+  filter(! State == "District of Columbia")
+
+serious <- left_join(serious, code, by = "State")
+
+serious$Small..Area.Estimate <- gsub("%","", serious$Small..Area.Estimate)
+# creates the map of Any Mental Illness
+f <- plot_ly(type="choropleth", locations=serious$Code, locationmode="USA-states", z=serious$Small..Area.Estimate) %>% layout(geo=list(scope="usa")) %>% 
+layout(paper_bgcolor='rgb(215, 218, 224)') 
+f
+```
+
+And finally, this shows the rates of serious thoughts of suicide in all of the states.
+
+### Thoughts of Suicide
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+suicide <- suicide %>% 
+  filter(Map.Group == 3) %>% 
+  filter(! State == "District of Columbia")
+
+suicide <- left_join(suicide, code, by = "State")
+
+suicide$Small..Area.Estimate <- gsub("%","", suicide$Small..Area.Estimate)
+# creates the map of Any Mental Illness
+f <- plot_ly(type="choropleth", locations=suicide$Code, locationmode="USA-states", z=suicide$Small..Area.Estimate) %>% layout(geo=list(scope="usa")) %>% 
+layout(paper_bgcolor='rgb(215, 218, 224)') 
+f
+```
+
+Mental illness is a very serious issue, often left undiscussed in the US. If you or someone you know might be struggling with mental illness, reach out. Here are some options: [BetterHelp](https://www.betterhelp.com/), [CrisisLine](https://crisisclinic.org/find-help/crisis-line/), and [MentalHealth.gov](https://www.mentalhealth.gov/get-help/immediate-help/).
+
+Data from [here](https://data.world/samhsa).
