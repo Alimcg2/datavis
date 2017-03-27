@@ -15,7 +15,7 @@ body{
     background-image: url("Images/bg1.png");
 
     /* Set a specific height */
-    height: 500px; 
+    height: 700px;; 
   background-position: 50% 50%;
 
     /* Create the parallax scrolling effect */
@@ -57,7 +57,7 @@ body{
     margin: auto;
     position: relative;
     width: 800px;
-    margin-top: 200px;
+    margin-top: 400px;
     padding-top: 100px;
     height: 500px;
     /* color and look */
@@ -68,7 +68,7 @@ body{
 
 h1{
     color: #527a6a;
-    margin-top: -280px;
+    margin-top: -500px;
     font-size: 80px;
     font-family: 'Poiret One', cursive;
     position: relative;
@@ -76,10 +76,21 @@ h1{
     text-align: center;
 }
 
-#space{
-    height: 30px;
+#scroll {
+    text-align: center;
+    color: #527a6a;
+    font-size: 20px;
+    font-family: 'Poiret One', cursive;
+    animation: op 5s;
+    animation-delay: 1s;
+    opacity: 0;
 }
 
+@keyframes op {
+    from {opacity: 0.0;}
+    to {opacity: 1;}
+}
+    
 .text{
     color: white;
     text-overflow: ellipsis;

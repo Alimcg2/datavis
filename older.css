@@ -14,9 +14,8 @@ body{
 
 #HeaderBar{
     color: white;
-    margin-left: 10px;
-    margin-right: 10px;
-    width: 83.5%;
+    margin-left: -10px;
+    width: 100%;
     position: fixed;
     padding-left: 200px;
     opacity: 1;
@@ -41,7 +40,7 @@ body{
 #MenuBar{
     position: fixed;
     font-size: 30px;
-    right: 100px;
+    right: 200px;
     margin-top: 80px;
     font-family: 'Poiret One', cursive;
 }
@@ -61,9 +60,9 @@ a:visited{
 #allPosts{
     position: absolute;
     margin-top: 150px;
-    margin-left: 300px;
+    margin-left: 25%;
     margin-bottom: 100px;
-    margin-right: 300px;
+    margin-right: 25%;
 }
 .post{
     margin-top: 30px;
