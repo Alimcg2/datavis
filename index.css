@@ -1,66 +1,81 @@
 /* background color change */
 body{
     background:#527a6a;
+    /* just in case the color changing
     -webkit-animation:colour 10s linear infinite;}
 @-webkit-keyframes colour{
     0%{background:#527a6a}
     40%{background:#52777a}
     80%{background:#5f7a52}
     100%{background:#527a6a}
+*/
+}
+#para1{
+    /* The image used */
+    background-image: url("Images/bg1.png");
+
+    /* Set a specific height */
+    height: 500px; 
+  background-position: 50% 50%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: repeat;
 }
 
-#circle{
-    /* sets up the positioning */
-    top: 24px;
-    position: absolute;
-    margin-left: 24px;
-    width: 750px;
-    height: 750px;
-    /* creates citcle */
-    border-radius: 50%;
-    /* color and look */
-    overflow: hidden;
-    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3), -6px -6px 15px rgba(0, 0, 0, 0.3);
-    background-color: #c0bebf;
-    opacity: 1;
+#para2{
+    /* The image used */
+    background-image: url("Images/bg2.png");
+
+    /* Set a specific height */
+    height: 500px;
+  background-position: 50% 50%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: repeat;
+}
+
+#para3{
+    /* The image used */
+    background-image: url("Images/bg3.png");
+
+    /* Set a specific height */
+    height: 500px;
+    background-position: 50% 50%;
+    margin-top: 700px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: repeat;
 }
 #outerCircle{
     /* sets up the positioning */
-    top: 2%;
-    position: absolute;
-    margin-left: 23%;
+    margin: auto;
+    position: relative;
     width: 800px;
-    height: 800px;
-    /* creates citcle */
-    border-radius: 50%;
+    margin-top: 200px;
+    padding-top: 100px;
+    height: 500px;
     /* color and look */
-    background: #f3f2f5;
     overflow: hidden;
-    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3), -6px -6px 15px rgba(0, 0, 0, 0.3);
-    opacity: .7;
+    margin-bottom: 50px;
 }
 
 
 h1{
-    color: white;
+    color: #527a6a;
+    margin-top: -280px;
     font-size: 80px;
-    font-variant: small-caps;
     font-family: 'Poiret One', cursive;
     position: relative;
     z-index: 2;
+    text-align:center;
 }
 
-#backHead{
-    position: absolute;
-    color: white;
-    font-size: 150px;
-    font-variant: small-caps;
-    font-family: 'Khula', sans-serif;
-    z-index: 1;
-    opacity: 0.3;
-    margin-left: 27%;
-    margin-top: -200px;
-}
 #space{
     height: 30px;
 }
@@ -77,49 +92,52 @@ h1{
 }
 
 .text:hover{
-    color: #52510d;
+    color: #a6a7a8;
 }
     
 .icon{
-    height: 60px;
-    width: 60px;
+    height: 35px;
+    width: 35px;
 }
 #icon1{
     margin-right: 350px;
-    margin-top: 80px;
+    margin-top: 230px;
 }
 #icon2{
     margin-right: 130px;
+    margin-top: -35px;
 }
 #icon3{
     margin-left: 130px;
-    margin-top: -65px;
+    margin-top: -35px;
 }
 
 #icon4{
-    margin-top: -123px;
+    margin-top: -35px;
     margin-left: 350px;
 }
 .iconImage{
-    height: 60px;
-    width: 60px;
+    height: 35px;
+    width: 35px;
     border-radius: 20%;
-    opacity: .8;
 }
 
-#posts{
-    margin-top: 1000px;
-    width: 100%;
-    opacity: .6;
+#middleText{
+    color: #527a6a;
+    font-size: 80px;
+    font-family: 'Poiret One', cursive;
     position: absolute;
-    z-index: 0;
-    max-height: 200px;
-    background-color: white;
+    z-index: 2;
+    margin-top: 200px;
+    margin-left: 15%;
+    
 }
 #frontPosts{
+    color: white;
     position: relative;
-    padding-top: 20px;
-    margin-left: 80px;
+    margin-top: 80px;
+    padding-top: 60px;
+    margin-left: 200px;
     font-size: 70px;
     font-family: 'Poiret One', cursive;
     z-index: 2;
@@ -129,14 +147,14 @@ h1{
     z-index: 1;
     font-size: 200px;
     margin-left: 300px;
-    margin-top: -10px;
+    margin-top: -50px;
     font-family: 'Khula', sans-serif;
     opacity: .2;
 }
 
 #graph{
-    margin-top: 1250px;
-    margin-left: 20%;
+    margin-top: 20px;
+    margin-left: 15%;
     width: 70%;
     height: 60%;
     background-color: transparent;
@@ -212,48 +230,38 @@ h1{
 }
 
 #Xaxis{
-    margin-top: 500px;
+    margin-top: 450px;
     margin-left: 800px;
 }
 
-#about{
-    margin-top: 2000px;
-    width: 100%;
-    opacity: .6;
+#middleText2{
     position: absolute;
-    z-index: 0;
-    max-height: 200px;
-    background-color: white;
+    margin-top: 200px;
+    margin-left: 35%;
 }
-
 #meHeading{
+    color: white;
     position: relative;
-    padding-top: 20px;
-    margin-left: 80px;
+    margin-top: 80px;
+    padding-top: 60px;
+    margin-left: 200px;
     font-size: 70px;
     font-family: 'Poiret One', cursive;
     z-index: 2;
 }
-
 #backHeading{
     position: absolute;
     z-index: 1;
     font-size: 200px;
     margin-left: 300px;
-    margin-top: -10px;
+    margin-top: -50px;
     font-family: 'Khula', sans-serif;
     opacity: .2;
-    animation-name: mymove;
 }
 
 
-@keyframes mymove {
-    from {margin-left: 0px;}
-    to {margin-left: 300px;}
-}
 #bout{
     margin-left: 30px;
-    margin-top: 2200px;
     position: absolute;
 }
 #hist{
