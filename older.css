@@ -41,7 +41,7 @@ body{
 #MenuBar{
     position: fixed;
     font-size: 30px;
-    margin-left: 700px;
+    right: 100px;
     margin-top: 80px;
     font-family: 'Poiret One', cursive;
 }

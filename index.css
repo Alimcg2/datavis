@@ -45,7 +45,7 @@ body{
     /* Set a specific height */
     height: 500px;
     background-position: 50% 50%;
-    margin-top: 700px;
+    margin-top: 800px;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -73,7 +73,7 @@ h1{
     font-family: 'Poiret One', cursive;
     position: relative;
     z-index: 2;
-    text-align:center;
+    text-align: center;
 }
 
 #space{
@@ -126,10 +126,9 @@ h1{
     color: #527a6a;
     font-size: 80px;
     font-family: 'Poiret One', cursive;
-    position: absolute;
-    z-index: 2;
-    margin-top: 200px;
-    margin-left: 15%;
+    margin-top: 100px;
+    padding-top: 200px;
+    text-align: center;
     
 }
 #frontPosts{
@@ -156,7 +155,7 @@ h1{
     margin-top: 20px;
     margin-left: 15%;
     width: 70%;
-    height: 60%;
+    height: 500px;
     background-color: transparent;
     background-image:       
       linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, .2) 25%, rgba(255, 255, 255, .2) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .2) 75%, rgba(255, 255, 255, .2) 76%, transparent 77%, transparent), 
@@ -210,28 +209,28 @@ h1{
 
 #img1{
     margin-top: 200px;
-    margin-left: 10px;
+    margin-left: 7%;
 }
 #img2{
     margin-top: 50px;
-    margin-left: 200px;
+    margin-left: 20%;
 }
 #img3{
     margin-top: 150px;
-    margin-left: 400px;
+    margin-left: 40%;
 }
 #img4{
     margin-top: 200px;
-    margin-left: 600px;
+    margin-left: 60%;
 }
 #img5{
     margin-top: 300px;
-    margin-left: 800px;
+    margin-left: 80%;
 }
 
 #Xaxis{
     margin-top: 450px;
-    margin-left: 800px;
+    margin-left: 80%;
 }
 
 #middleText2{
@@ -263,10 +262,13 @@ h1{
 #bout{
     margin-left: 30px;
     position: absolute;
+    width: 100%;
 }
+
 #hist{
     opacity: .2;
-    margin-left: 600px;
+    margin-left: 45%;
+    
     margin-top: 50px;
     margin-bottom: 50px;
 }
